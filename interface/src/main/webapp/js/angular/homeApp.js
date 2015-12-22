@@ -1,1 +1,1 @@
-var homeApp = angular.module("freeCommerce",[]);
+var app = angular.module("freeCommerce",[]);

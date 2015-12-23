@@ -3,14 +3,17 @@
         <div class="row">
             <div class="col-sm-6">
                 <div class="logo">
-                    <h1><a href="./"><img width="40%" src="img/logo.jpg"></a><div ng-init="createLike()" ng-include="'html/facebook/like.html'"></div></h1>
+                    <h1><a href="./"><img width="40%" height="10%" src="img/logo.jpg"></a>
+                        <div ng-init="createLike()" ng-include="'html/facebook/like.html'">
+                        </div>
+                    </h1>
                 </div>
 
             </div>
 
             <div class="col-sm-6">
                 <div class="shopping-item">
-                    <a href="cart.html">Cart - <span class="cart-amunt">$100{{products[0].name}} {{teste}}</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
+                    <a href="cart.html">Cart - <span class="cart-amunt" >{{cart.totalPrice | currency}}</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">{{cart.length}}</span></a>
                 </div>
             </div>
         </div>

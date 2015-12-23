@@ -11,6 +11,7 @@ public class Produto {
     private String image;
     private Double value;
     private Double lastPrice;
+    private Integer rating;
 
     public String getImage() {
         return image;
@@ -61,5 +62,13 @@ public class Produto {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Integer getRating() {
+        return rating;
+    }
+
+    public void setRating(Integer rating) {
+        this.rating = rating;
     }
 }

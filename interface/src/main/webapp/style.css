@@ -422,8 +422,8 @@ z-index: 999;}
 .product-hover a i.fa {
     margin-right: 5px;
 }
-.product-hover a.add-to-cart-link {top: -25%;}
-.product-hover a.view-details-link { bottom: -25%;}
+.product-hover a.add-to-cart-link {top: -25%;font-size:85%;width:80%;height:15%;align:center;}
+.product-hover a.view-details-link { bottom: -25%;font-size:95%;width:80%;height:15%;align:center;}
 .single-product h2 {
     font-size: 18px;
     line-height: 25px;

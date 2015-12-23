@@ -29,4 +29,22 @@ public class BuscaController {
 
         return ProdutosUtil.criarUltimosProdutosVendidos();
     }
+
+    @RequestMapping(path = "/topSellers",method = RequestMethod.GET)
+    public List<Produto> topSellers(){
+
+        return ProdutosUtil.criarTopSellers();
+    }
+
+    @RequestMapping(path = "/recentlyViewer",method = RequestMethod.GET)
+    public List<Produto> recentlyViewer(){
+
+        return ProdutosUtil.criarRecentlyViewer();
+    }
+
+    @RequestMapping(path = "/topNew",method = RequestMethod.GET)
+    public List<Produto> topNew(){
+
+        return ProdutosUtil.criarTopNew();
+    }
 }

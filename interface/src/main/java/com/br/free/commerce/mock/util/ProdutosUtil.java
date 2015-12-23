@@ -108,5 +108,106 @@ public class ProdutosUtil {
         return produtos;
     }
 
+    public static List<Produto> criarTopSellers() {
+        Produto prod1;
+        List<Produto> produtos = new ArrayList<Produto>();
+
+        prod1 = new Produto();
+        prod1.setName("Apple new i phone 6");
+        prod1.setLastPrice(425.0);
+        prod1.setImage("img/product-thumb-1.jpg");
+        prod1.setPrice(400.0);
+        prod1.setRating(3);
+
+        produtos.add(prod1);
+
+        prod1 = new Produto();
+        prod1.setName("Samsung gallaxy note 4");
+        prod1.setLastPrice(425.0);
+        prod1.setImage("img/product-thumb-2.jpg");
+        prod1.setPrice(400.0);
+        prod1.setRating(4);
+
+        produtos.add(prod1);
+
+        prod1 = new Produto();
+        prod1.setName("Apple new mac book 2015");
+        prod1.setLastPrice(425.0);
+        prod1.setImage("img/product-thumb-3.jpg");
+        prod1.setPrice(400.0);
+        prod1.setRating(2);
+
+        produtos.add(prod1);
+
+        return produtos;
+    }
+
+    public static List<Produto> criarRecentlyViewer() {
+        Produto prod1;
+        List<Produto> produtos = new ArrayList<Produto>();
+
+        prod1 = new Produto();
+        prod1.setName("Sony Smart TV - 2015");
+        prod1.setLastPrice(425.0);
+        prod1.setImage("img/product-thumb-4.jpg");
+        prod1.setPrice(400.0);
+        prod1.setRating(3);
+
+        produtos.add(prod1);
+
+        prod1 = new Produto();
+        prod1.setName("Apple new i phone 6");
+        prod1.setLastPrice(425.0);
+        prod1.setImage("img/product-thumb-1.jpg");
+        prod1.setPrice(400.0);
+        prod1.setRating(4);
+
+        produtos.add(prod1);
+
+        prod1 = new Produto();
+        prod1.setName("Samsung gallaxy note 4");
+        prod1.setLastPrice(425.0);
+        prod1.setImage("img/product-thumb-2.jpg");
+        prod1.setPrice(400.0);
+        prod1.setRating(4);
+
+        produtos.add(prod1);
+
+        return produtos;
+    }
+
+    public static List<Produto> criarTopNew() {
+        Produto prod1;
+        List<Produto> produtos = new ArrayList<Produto>();
+
+        prod1 = new Produto();
+        prod1.setName("Apple new mac book 2015");
+        prod1.setLastPrice(425.0);
+        prod1.setImage("img/product-thumb-3.jpg");
+        prod1.setPrice(400.0);
+        prod1.setRating(3);
+
+        produtos.add(prod1);
+
+        prod1 = new Produto();
+        prod1.setName("Sony Smart TV - 2015");
+        prod1.setLastPrice(425.0);
+        prod1.setImage("img/product-thumb-4.jpg");
+        prod1.setPrice(400.0);
+        prod1.setRating(4);
+
+        produtos.add(prod1);
+
+        prod1 = new Produto();
+        prod1.setName("Apple new i phone 6");
+        prod1.setLastPrice(425.0);
+        prod1.setImage("img/product-thumb-1.jpg");
+        prod1.setPrice(400.0);
+        prod1.setRating(2);
+
+        produtos.add(prod1);
+
+        return produtos;
+    }
 
 }

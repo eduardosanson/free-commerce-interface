@@ -38,115 +38,77 @@
   </head>
   <body ng-app="freeCommerce">
 
-  <div ng-controller="pageController">
-      <div ng-init="headPage()">
-          <div id="headContent">
-          </div>
-      </div>
+   <div ng-controller="homeController">
+
+
+      <div ng-include="'html/components/head.html'"></div>
+
+      <div ng-include="'html/components/brandArea.html'"></div>
+
+      <div ng-include="'html/components/meunuArea.html'"></div>
+
   </div>
+
+
 
   <div ng-controller="homeController">
 
-    <<div class="site-branding-area">
-      <div class="container">
-          <div class="row">
-              <div class="col-sm-6">
-                  <div class="logo">
-                      <h1><a href="./"><img src="img/logo.jpg"></a></h1>
-                  </div>
-              </div>
+      <div class="slider-area">
 
-              <div class="col-sm-6">
-                  <div class="shopping-item">
-                      <a href="cart.html">Cart - <span class="cart-amunt">$100</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div> <!-- End site branding area -->
-
-    <div class="mainmenu-area">
-        <div class="container">
-            <div class="row">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div> 
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="shop.html">Shop page</a></li>
-                        <li><a href="single-product.html">Single product</a></li>
-                        <li><a href="cart.html">Cart</a></li>
-                        <li><a href="checkout.html">Checkout</a></li>
-                        <li><a href="#">Category</a></li>
-                        <li><a href="#">Others</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>  
-            </div>
-        </div>
-    </div> <!-- End mainmenu area -->
-
-    <div class="slider-area">
-        	<!-- Slider -->
-			<div class="block-slider block-slider4" >
-				<ul class="" id="bxslider-home4">
-                    <li>
-                        <img ng-src="{{products[0].image}}" alt="Slide">
-                        <div class="caption-group">
-                            <h2 class="caption title">
-                                {{products[0].name}}
+          <!-- Slider -->
+          <div class="block-slider block-slider4" >
+              <ul class="" id="bxslider-home4">
+                  <li>
+                      <img ng-src="{{products[0].image}}" alt="Slide">
+                      <div class="caption-group">
+                          <h2 class="caption title">
+                              {{products[0].name}}
                               <span class="primary"><strong>{{products[0].techDescription}}</strong></span>
-                              </h2>
-                              <h4 class="caption subtitle">{{products[0].description}}</h4>
-                              <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
-                            </div>
-                    </li>
-                    <li>
-                        <img ng-src="{{products[1].image}}" alt="Slide">
-                        <div class="caption-group">
-                            <h2 class="caption title">
-                                {{products[1].name}}
+                          </h2>
+                          <h4 class="caption subtitle">{{products[0].description}}</h4>
+                          <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
+                      </div>
+                  </li>
+                  <li>
+                      <img ng-src="{{products[1].image}}" alt="Slide">
+                      <div class="caption-group">
+                          <h2 class="caption title">
+                              {{products[1].name}}
                               <span class="primary"><strong>{{products[1].techDescription}}</strong></span>
-                            </h2>
-                            <h4 class="caption subtitle">{{products[1].description}}</h4>
-                            <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
-                        </div>
-                    </li>
-                    <li>
-                        <img ng-src="{{products[2].image}}" alt="Slide">
-                        <div class="caption-group">
-                            <h2 class="caption title">
-                                {{products[2].name}}
-                                <span class="primary"><strong>{{products[2].techDescription}}</strong></span>
-                            </h2>
-                            <h4 class="caption subtitle">{{products[2].description}}</h4>
-                            <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
-                        </div>
-                    </li>
-                    <li>
-                        <img ng-src="{{products[3].image}}" alt="Slide">
-                        <div class="caption-group">
-                            <h2 class="caption title">
-                                {{products[3].name}}
-                                <span class="primary"><strong>{{products[3].techDescription}}</strong></span>
-                            </h2>
-                            <h4 class="caption subtitle">{{products[3].description}}</h4>
-                            <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
-                        </div>
-                    </li>
-				</ul>
-			</div>
-			<!-- ./Slider -->
-    </div> <!-- End slider area -->
+                          </h2>
+                          <h4 class="caption subtitle">{{products[1].description}}</h4>
+                          <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
+                      </div>
+                  </li>
+                  <li>
+                      <img ng-src="{{products[2].image}}" alt="Slide">
+                      <div class="caption-group">
+                          <h2 class="caption title">
+                              {{products[2].name}}
+                              <span class="primary"><strong>{{products[2].techDescription}}</strong></span>
+                          </h2>
+                          <h4 class="caption subtitle">{{products[2].description}}</h4>
+                          <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
+                      </div>
+                  </li>
+                  <li>
+                      <img ng-src="{{products[3].image}}" alt="Slide">
+                      <div class="caption-group">
+                          <h2 class="caption title">
+                              {{products[3].name}}
+                              <span class="primary"><strong>{{products[3].techDescription}}</strong></span>
+                          </h2>
+                          <h4 class="caption subtitle">{{products[3].description}}</h4>
+                          <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
+                      </div>
+                  </li>
+              </ul>
+          </div>
+          <!-- ./Slider -->
+      </div> <!-- End slider area -->
 
 
-    <div class="promo-area">
+      <div class="promo-area">
         <div class="zigzag-bottom"></div>
         <div class="container">
             <div class="row">
@@ -297,14 +259,14 @@
                             <img src="img/brand5.png" alt="">
                             <img src="img/brand6.png" alt="">
                             <img src="img/brand1.png" alt="">
-                            <img src="img/brand2.png" alt="">                            
+                            <img src="img/brand2.png" alt="">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div> <!-- End brands area -->
-    
+
     <div class="product-widget-area">
         <div class="zigzag-bottom"></div>
         <div class="container">
@@ -563,7 +525,7 @@
 
     <!--Controllers -->
     <script src="js/controller/homeController.js"></script>
-    <script src="js/controller/pageController.js"></script>
+    <script src="js/controller/faceBookController.js"></script>
 
     <!-- Directives -->
 

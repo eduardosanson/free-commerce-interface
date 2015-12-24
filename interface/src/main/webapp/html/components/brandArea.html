@@ -2,20 +2,18 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
+
+            </div>
+            <div class="col-sm-6">
                 <div class="logo">
-                    <h1><a href="./"><img width="40%" height="10%" src="img/logo.jpg"></a>
+                    <h1><a href="./"><img right="0%" width="30%" height="10%" src="img/logo.jpg"></a>
                         <div ng-init="createLike()" ng-include="'html/facebook/like.html'">
                         </div>
                     </h1>
                 </div>
-
             </div>
 
-            <div class="col-sm-6">
-                <div class="shopping-item">
-                    <a href="cart.html">Cart - <span class="cart-amunt" >{{cart.totalPrice | currency}}</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">{{cart.length}}</span></a>
-                </div>
-            </div>
         </div>
+
     </div>
 </div> <!-- End site branding area -->

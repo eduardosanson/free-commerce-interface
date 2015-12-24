@@ -46,9 +46,11 @@ body { font-family:Arial, Helvetica, sans-serif; }
 }
 .user-menu li a {
     display: block;
-    font-size: 13px;
+    font-size: 95%;
     margin-right: 5px;
     padding: 10px;
+    font-weight: bold;
+
 }
 .user-menu li a i.fa {
     margin-right: 5px;
@@ -99,6 +101,7 @@ z-index: 999;}
     margin-top: 40px;
     padding: 10px;
     position: relative;
+    right:10%
 }
 .shopping-item a {
     color: #666;

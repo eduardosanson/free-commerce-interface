@@ -99,13 +99,16 @@ z-index: 999;}
     float: right;
     font-size: 18px;
     margin-top: 40px;
-    padding: 10px;
+    padding: 15px;
     position: relative;
-    right:10%
+    right:10%;
+    left:10%;
+    width:190px;
 }
 .shopping-item a {
     color: #666;
 }
+body { padding-top: 70px; }
 .cart-amunt {
     color: #5a88ca;
     font-weight: 700;
@@ -1124,3 +1127,48 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background
 .pagination > li > a, .pagination > li > span {
   color: #5a88ca;
 }
+
+    #custom-search-form {
+        margin:0;
+        margin-top: 5px;
+        padding: 0;
+    }
+
+    #custom-search-form .search-query {
+        padding-right: 3px;
+        padding-right: 4px \9;
+        padding-left: 3px;
+        padding-left: 4px \9;
+        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+
+        margin-bottom: 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        -webkit-transition: width  0.2s ease-in-out;
+    -moz-transition:width  0.2s ease-in-out;
+    -o-transition: width  0.2s ease-in-out;
+    transition: width  0.2s ease-in-out;
+    }
+
+    #custom-search-form button {
+        border: 0;
+        background: none;
+        /** belows styles are working good */
+        padding: 2px 5px;
+        margin-top: 2px;
+        position: relative;
+        left: -28px;
+        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+        margin-bottom: 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+    }
+
+    .search-query:focus + button {
+        z-index: 3;
+    }
+    .search-query:focus{
+        width: 260px;
+    }

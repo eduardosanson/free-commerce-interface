@@ -29,11 +29,11 @@ app.controller('homeController',
 
         angular.extend(this, $controller('faceBookController', {$scope: $scope}));
 
-        $http.get('http://10.10.16.184:8090/buscaController/quatroMaisVendidos').success(function(data){
+        $http.get('http://192.168.25.2:8090/buscaController/quatroMaisVendidos').success(function(data){
             $scope.products=data;
         });
 
-        $http.get('http://10.10.16.184:8090/buscaController/ultimosProdutosVendidos').success(function(data){
+        $http.get('http://192.168.25.2:8090/buscaController/ultimosProdutosVendidos').success(function(data){
             $scope.productLatest=data;
             length = $scope.productLatest.length;
             for(i=0;i<length;i++){
@@ -45,7 +45,7 @@ app.controller('homeController',
         });
 
         $scope.topSellers = function(){
-        $http.get('http://10.10.16.184:8090/buscaController/topSellers').success(function(data){
+        $http.get('http://192.168.25.2:8090/buscaController/topSellers').success(function(data){
                     $scope.productsTopSellers=data;
                     var length = $scope.productsTopSellers.length
                     for(i =0;i<length;i++){
@@ -60,7 +60,7 @@ app.controller('homeController',
         }
 
         $scope.recentlyViewer = function(){
-        $http.get('http://10.10.16.184:8090/buscaController/recentlyViewer').success(function(data){
+        $http.get('http://192.168.25.2:8090/buscaController/recentlyViewer').success(function(data){
                             $scope.productsRecentlyViewer=data;
                             var length = $scope.productsRecentlyViewer.length
                             for(i =0;i<length;i++){
@@ -76,7 +76,7 @@ app.controller('homeController',
         }
 
         $scope.topNew = function(){
-        $http.get('http://10.10.16.184:8090/buscaController/topNew').success(function(data){
+        $http.get('http:/192.168.25.2:8090/buscaController/topNew').success(function(data){
                                     $scope.productsTopNew=data;
                                     var length = $scope.productsTopNew.length
                                     for(i =0;i<length;i++){

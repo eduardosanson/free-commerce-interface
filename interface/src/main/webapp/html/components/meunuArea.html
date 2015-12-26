@@ -1,6 +1,14 @@
 <div class="mainmenu-area">
     <div class="container">
-            <div ng-init="createLike()" ng-include="'html/facebook/like.html'"></div><br>
+            <div class="row">
+                <div class="col-md-6">
+                    <div ng-init="createLike()" ng-include="'html/facebook/like.html'"></div><br>
+                </div>
+            </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-8"></div>
+            <div class="col-xs-6 col-md-4"></div>
+        </div>
 
         <div class="row">
             <div class="navbar-header">
@@ -13,14 +21,14 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">Shop page</a></li>
-                    <li><a href="single-product.html">Single product</a></li>
-                    <li><a href="cart.html">Cart</a></li>
-                    <li><a href="checkout.html">Checkout</a></li>
-                    <li><a href="#">Category</a></li>
-                    <li><a href="#">Others</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li ng-class="menus[0].value==true?'active':''"><a href="#" ng-click="activateMenu(menus[0].name)">Home</a></li>
+                    <li ng-class="menus[1].value==true?'active':''"><a href="#" ng-click="activateMenu(menus[1].name)">Lista de Desejos</a></li>
+                    <li ng-class="menus[2].value==true?'active':''"><a href="#" ng-click="activateMenu(menus[2].name)">Carrinho</a></li>
+                    <li ng-class="menus[3].value==true?'active':''"><a href="#" ng-click="activateMenu(menus[3].name)">Endereço de Entrega</a></li>
+                    <li ng-class="menus[4].value==true?'active':''"><a href="#" ng-click="activateMenu(menus[4].name)">Produtos</a></li>
+                    <li><a href="#" ng-click="">Category</a></li>
+                    <li><a href="#" ng-click="">Others</a></li>
+                    <li><a href="#" ng-click="">Contact</a></li>
                 </ul>
             </div>
         </div>

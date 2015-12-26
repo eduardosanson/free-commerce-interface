@@ -19,32 +19,18 @@ import java.util.List;
 public class BuscaController {
 
     @RequestMapping(path ="/quatroMaisVendidos", method = RequestMethod.GET)
-    public List<Produto> buscarQuatroProdutosMaisVendidos(){
-
-        return ProdutosUtil.criarQuatroProdutos();
-    }
+    public List<Produto> buscarQuatroProdutosMaisVendidos(){return ProdutosUtil.criarQuatroProdutos();}
 
     @RequestMapping(path ="/ultimosProdutosVendidos", method = RequestMethod.GET)
-    public List<Produto> buscarUltimosProdutosVendidos(){
-
-        return ProdutosUtil.criarUltimosProdutosVendidos();
-    }
+    public List<Produto> buscarUltimosProdutosVendidos(){return ProdutosUtil.criarUltimosProdutosVendidos();}
 
     @RequestMapping(path = "/topSellers",method = RequestMethod.GET)
-    public List<Produto> topSellers(){
-
-        return ProdutosUtil.criarTopSellers();
-    }
+    public List<Produto> topSellers(){return ProdutosUtil.criarTopSellers();}
 
     @RequestMapping(path = "/recentlyViewer",method = RequestMethod.GET)
-    public List<Produto> recentlyViewer(){
-
-        return ProdutosUtil.criarRecentlyViewer();
-    }
+    public List<Produto> recentlyViewer(){return ProdutosUtil.criarRecentlyViewer();}
 
     @RequestMapping(path = "/topNew",method = RequestMethod.GET)
-    public List<Produto> topNew(){
+    public List<Produto> topNew(){return ProdutosUtil.criarTopNew();}
 
-        return ProdutosUtil.criarTopNew();
-    }
 }

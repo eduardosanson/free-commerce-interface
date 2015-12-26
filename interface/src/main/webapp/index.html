@@ -36,25 +36,27 @@
       <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
 
   </head>
-  <body ng-app="freeCommerce" data-spy="scroll" data-target=".navbar" data-offset="50">
+  <body  data-spy="scroll" data-target=".navbar" data-offset="50">
+
+  <div ng-app="freeCommerce">
 
    <div ng-controller="homeController"  class="row">
 
+       <div ng-include="'html/components/head.html'"></div>
 
-      <div ng-include="'html/components/cart.html'"></div>
+       <div ng-include="'html/components/meunuArea.html'"></div>
 
-      <div ng-include="'html/components/head.html'"></div>
+       <div ng-show="menus[1].value" ng-include="'html/components/whishList.html'"></div>
 
-      <div ng-include="'html/components/brandArea.html'"></div>
+       <div ng-show="menus[2].value" ng-include="'html/components/cart.html'"></div>
 
-      <div ng-include="'html/components/meunuArea.html'"></div>
+       <div ng-show="menus[3].value" ng-include="'html/components/signUp.html'"></div>
 
-  </div>
+       <div ng-show="menus[4].value" ng-include="'html/components/single-product.html'"></div>
 
+  <div>
 
-
-  <div ng-controller="homeController">
-
+      <div id="home" ng-show="menus[0].value" >
       <div class="slider-area">
 
           <!-- Slider -->
@@ -136,7 +138,7 @@
                                 <div class="product-f-image">
                                     <img ng-src="{{productLatest[1].image}}" alt="">
                                     <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                        <a href="#" ng-click="addToCart(productLatest[1])" class="add-to-cart-link" ><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                         <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                     </div>
                                 </div>
@@ -151,7 +153,7 @@
                                 <div class="product-f-image">
                                     <img ng-src="{{productLatest[2].image}}" alt="">
                                     <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                        <a href="#" ng-click="addToCart(productLatest[2])" class="add-to-cart-link"><i class="fa fa-shopping-cart" ></i> Add to cart</a>
                                         <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                     </div>
                                 </div>
@@ -166,7 +168,7 @@
                                 <div class="product-f-image">
                                     <img ng-src="{{productLatest[3].image}}" alt="">
                                     <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                        <a href="#" ng-click="addToCart(productLatest[3])" class="add-to-cart-link"><i class="fa fa-shopping-cart" ></i> Add to cart</a>
                                         <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                     </div>
                                 </div>
@@ -181,7 +183,7 @@
                                 <div class="product-f-image">
                                     <img ng-src="{{productLatest[4].image}}" alt="">
                                     <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                        <a href="#" ng-click="addToCart(productLatest[4])" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                         <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                     </div>
                                 </div>
@@ -196,7 +198,7 @@
                                 <div class="product-f-image">
                                     <img ng-src="{{productLatest[5].image}}" alt="">
                                     <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                        <a href="#" ng-click="addToCart(productLatest[5])" class="add-to-cart-link"><i class="fa fa-shopping-cart" ></i> Add to cart</a>
                                         <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                     </div>
                                 </div>
@@ -269,6 +271,7 @@
             </div>
         </div>
     </div> <!-- End product widget area -->
+      </div>
     
     <div class="footer-top-area">
         <div class="zigzag-bottom"></div>
@@ -350,6 +353,7 @@
         </div>
     </div> <!-- End footer bottom area -->
   </div>
+  </div></div>
    
     <!-- Latest jQuery form server -->
     <script src="https://code.jquery.com/jquery.min.js"></script>
@@ -381,8 +385,9 @@
     <script src="js/angular/homeApp.js"></script>
 
     <!--Controllers -->
-    <script src="js/controller/homeController.js"></script>
-    <script src="js/controller/faceBookController.js"></script>
+  <script src="js/controller/faceBookController.js"></script>
+  <script src="js/controller/menuCtrl.js"></script>
+  <script src="js/controller/homeController.js"></script>
 
     <!-- Directives -->
 

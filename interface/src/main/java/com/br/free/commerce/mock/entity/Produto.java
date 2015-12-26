@@ -1,10 +1,15 @@
 package com.br.free.commerce.mock.entity;
 
+import org.bouncycastle.crypto.prng.RandomGenerator;
+
+import java.util.Random;
+
 /**
  * Created by eduardosanson on 20/12/15.
  */
 public class Produto {
 
+    private long id;
     private String name;
     private String techDescription;
     private String description;
@@ -12,6 +17,19 @@ public class Produto {
     private Double value;
     private Double lastPrice;
     private Integer rating;
+
+
+    public Produto() {
+        this.id = new Random().nextInt(10000000);
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public String getImage() {
         return image;
@@ -71,4 +89,5 @@ public class Produto {
     public void setRating(Integer rating) {
         this.rating = rating;
     }
-}
+
+    }

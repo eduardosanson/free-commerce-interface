@@ -149,6 +149,14 @@ app.controller('homeController',
                                 });
                 }
 
+        $scope.searchProductsByName = function(productName){
+                $http.get('http://192.168.25.2:8090/buscaController/buscarProdutos/PorNome?productName='+productName).
+                success(function(data){
+                        $scope.productsFind=data;
+                        $scope.activateMenu($scope.menus[1].name);
+                })
+        }
+
 
         }]
 );

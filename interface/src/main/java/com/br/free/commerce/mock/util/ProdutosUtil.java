@@ -210,4 +210,49 @@ public class ProdutosUtil {
         return produtos;
     }
 
+    public static List<Produto> criarListaDeBusca(){
+        Produto produto;
+        List<Produto> produtos = new ArrayList<Produto>();
+
+        for(int i = 0; i<3;i++) {
+            produto = new Produto();
+            produto.setName("Apple new mac book 2015 March :P");
+            produto.setLastPrice(999.0);
+            produto.setImage("img/product-2.jpg");
+            produto.setPrice(899.0);
+            produto.setRating(3);
+
+            produtos.add(produto);
+
+            produto = new Produto();
+            produto.setName("Apple new mac book 2015 March :P");
+            produto.setLastPrice(999.0);
+            produto.setImage("img/product-1.jpg");
+            produto.setPrice(899.0);
+            produto.setRating(3);
+
+            produtos.add(produto);
+
+            produto = new Produto();
+            produto.setName("Apple new mac book 2015 March :P");
+            produto.setLastPrice(999.0);
+            produto.setImage("img/product-3.jpg");
+            produto.setPrice(899.0);
+            produto.setRating(3);
+
+            produtos.add(produto);
+
+            produto = new Produto();
+            produto.setName("Apple new mac book 2015 March :P");
+            produto.setLastPrice(999.0);
+            produto.setImage("img/product-4.jpg");
+            produto.setPrice(899.0);
+            produto.setRating(3);
+
+            produtos.add(produto);
+        }
+
+        return produtos;
+    }
+
 }

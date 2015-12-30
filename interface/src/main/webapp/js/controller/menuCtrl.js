@@ -16,7 +16,7 @@ app.controller('menuCtrl', function($scope){
                     },
                     {
                      value:false,
-                     name:'WHISHlIST'
+                     name:'PRODUTOS'
                     },
                     {
                     value:false,
@@ -29,6 +29,14 @@ app.controller('menuCtrl', function($scope){
                     {
                     value:false,
                     name:'PRODUTO'
+                    },
+                    {
+                    value:false,
+                    name:'LOJAS'
+                    },
+                    {
+                    value:false,
+                    name:'EMPREENDER'
                     }
                     ]
 
@@ -50,6 +58,12 @@ app.controller('menuCtrl', function($scope){
                             break;
                         case $scope.menus[4].name:
                             enableMenu($scope.menus[4].name);
+                            break;
+                        case $scope.menus[5].name:
+                            enableMenu($scope.menus[5].name);
+                            break;
+                        case $scope.menus[6].name:
+                            enableMenu($scope.menus[6].name);
                             break;
                         default: enableMenu($scope.menus[0].name);
                     }
@@ -73,5 +87,21 @@ app.controller('menuCtrl', function($scope){
          }
 
         }
+
+    $scope.fileinputFunction = function(){
+       $("#input-ficons-3").fileinput({
+           uploadUrl: "/img",
+           previewFileIcon: '<i class="fa fa-file"></i>',
+           allowedPreviewTypes: ['image', 'text'], // allow only preview of image & text files
+           previewFileIconSettings: {
+               'docx': '<i class="fa fa-file-word-o text-primary"></i>',
+               'xlsx': '<i class="fa fa-file-excel-o text-success"></i>',
+               'pptx': '<i class="fa fa-file-powerpoint-o text-danger"></i>',
+               'pdf': '<i class="fa fa-file-pdf-o text-danger"></i>',
+               'zip': '<i class="fa fa-file-archive-o text-muted"></i>',
+           }
+       });
+    }
+
 
 });

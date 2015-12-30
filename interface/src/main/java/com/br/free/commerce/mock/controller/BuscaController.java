@@ -2,10 +2,7 @@ package com.br.free.commerce.mock.controller;
 
 import com.br.free.commerce.mock.entity.Produto;
 import com.br.free.commerce.mock.util.ProdutosUtil;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -32,5 +29,8 @@ public class BuscaController {
 
     @RequestMapping(path = "/topNew",method = RequestMethod.GET)
     public List<Produto> topNew(){return ProdutosUtil.criarTopNew();}
+
+    @RequestMapping(path = "/buscarProdutos/PorNome")
+    public List<Produto> buscarProdutoPorNome(@RequestParam String productName){return ProdutosUtil.criarListaDeBusca();}
 
 }

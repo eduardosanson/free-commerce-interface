@@ -6,50 +6,61 @@
                 <div class="container">
                     <div class="row">
 
-                        <div class="col-xs-12 col-sm-6 col-md-8" align="center">
-
-                            <div class="site-branding-area">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="logo">
-                                                <h1><a href="./" ng-click="activateMenu(menus[0].name)"><img src="img/logo.jpg"></a></h1>
-                                            </div>
-                                        </div>
-                                    </div>
+                        <div class="col-md-2">
+                                <a href="./" ng-click="activateMenu(menus[0].name)"><img src="img/logo.png" align="right" width="80px"></a>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-8">
+                            <form ng-submit="searchProductsByName(productName)" class="search-form">
+                                <div class="form-group has-feedback">
+                                    <label for="search" class="sr-only">Search</label>
+                                    <input type="text" class="form-control" name="search" ng-model="productName" ng-enter="productName=null" id="search" placeholder="search">
+                                    <span class="glyphicon glyphicon-search form-control-feedback"></span>
                                 </div>
-                            </div> <!-- End site branding area -->
-
+                            </form>
                         </div>
-                        </div>
-
-                    <div class="row">
-                        <form action="" class="search-form">
-                            <div class="form-group has-feedback">
-                                <label for="search" class="sr-only">Search</label>
-                                <input type="text" class="form-control" name="search" id="search" placeholder="search">
-                                <span class="glyphicon glyphicon-search form-control-feedback"></span>
-                            </div>
-                        </form>
                     </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="row">
+        <div id="custom-bootstrap-menu" class="navbar navbar-default " role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header"><a class="navbar-brand" href="#">Free-Commerce</a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse navbar-menubuilder">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li ng-class="menus[0].value==true?'active':''"><a href="#" ng-click="activateMenu(menus[0].name)">Home</a></li>
+                        <li ng-show="menus[1].value" ng-class="menus[1].value==true?'active':''"><a href="#" ng-click="activateMenu(menus[1].name)">Produtos</a></li>
+                        <li ng-class="menus[2].value==true?'active':''"><a href="#" ng-click="activateMenu(menus[2].name)">Carrinho</a></li>
+                        <li ng-class="menus[3].value==true?'active':''"><a href="#" ng-click="activateMenu(menus[3].name)">Endereço de Entrega</a></li>
+                        <li ng-class="menus[4].value==true?'active':''"><a href="#" ng-click="activateMenu(menus[4].name)">Descrição do Produto</a></li>
+                        <li ng-class="menus[5].value==true?'active':''"><a href="#" ng-click="activateMenu(menus[5].name)">Lojas</a></li>
+                        <li ng-class="menus[6].value==true?'active':''"><a href="#" ng-click="activateMenu(menus[6].name)">Empreender</a></li>
+                        <li><a href="#" ng-click="">Category</a></li>
+                        <li><a href="#" ng-click="">Others</a></li>
+                        <li><a href="#" ng-click="">Contact</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
 
-    <br><br><br><br><br>
-
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div ng-init="createLike()" ng-include="'html/facebook/like.html'"></div><br>
+        </div>
+    </div>
 </div>
 
-<div class="row">
-    <div class="col-xs-12 col-sm-6 col-md-8"></div>
-    <div class="col-xs-6 col-md-4"></div>
-</div>
+
 <div class="row">
     <div class="col-xs-6 col-sm-4"></div>
     <div class="col-xs-6 col-sm-4"></div>
-    <!-- Optional: clear the XS cols if their content doesn't match in height -->
-    <div class="clearfix visible-xs-block"></div>
 
     <div class="col-xs-6 col-sm-4" align="right">
 

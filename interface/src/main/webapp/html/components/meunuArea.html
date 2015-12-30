@@ -22,14 +22,77 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li ng-class="menus[0].value==true?'active':''"><a href="#" ng-click="activateMenu(menus[0].name)">Home</a></li>
-                    <li ng-class="menus[1].value==true?'active':''"><a href="#" ng-click="activateMenu(menus[1].name)">Lista de Desejos</a></li>
+                    <li ng-show="menus[1].value" ng-class="menus[1].value==true?'active':''"><a href="#" ng-click="activateMenu(menus[1].name)">Produtos</a></li>
                     <li ng-class="menus[2].value==true?'active':''"><a href="#" ng-click="activateMenu(menus[2].name)">Carrinho</a></li>
                     <li ng-class="menus[3].value==true?'active':''"><a href="#" ng-click="activateMenu(menus[3].name)">Endereço de Entrega</a></li>
-                    <li ng-class="menus[4].value==true?'active':''"><a href="#" ng-click="activateMenu(menus[4].name)">Produtos</a></li>
+                    <li ng-class="menus[4].value==true?'active':''"><a href="#" ng-click="activateMenu(menus[4].name)">Descrição do Produto</a></li>
+                    <li ng-class="menus[5].value==true?'active':''"><a href="#" ng-click="activateMenu(menus[5].name)">Lojas</a></li>
+                    <li ng-class="menus[6].value==true?'active':''"><a href="#" ng-click="activateMenu(menus[6].name)">Empreender</a></li>
                     <li><a href="#" ng-click="">Category</a></li>
                     <li><a href="#" ng-click="">Others</a></li>
                     <li><a href="#" ng-click="">Contact</a></li>
                 </ul>
+            </div>
+            <br>
+            <div class="container" ng-show="menus[1].value">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-8">
+
+                                <div class="input-group" ng-model="categoria">
+                                    <div class="input-group-btn">
+                                        <div class="dropdown">
+                                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Categoria
+                                                <span class="caret"></span>
+                                                <span class="sr-only">Toggle Dropdown</span>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                                <li><a href="#"  ng-click="categoria='Eletrônicos'">Eletrônicos</a></li>
+                                                <li><a href="#"  ng-click="categoria='Casa'">Casa</a></li>
+                                                <li><a href="#"  ng-click="categoria='Saúde'">Saúde</a></li>
+                                                <li><a href="#"  ng-click="categoria='Saúde'"></a></li>
+                                            </ul>
+                                        </div>  <!-- Button and dropdown menu -->
+                                    </div>
+                                    <input type="text" class="form-control" aria-label="..." readonly="true" value="{{categoria}}">
+                                </div>
+
+                            </div>
+                            <div class="col-md-1">
+                                <button ng-click="categoria=null" class="btn-primary">X</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-8">
+
+                                <div class="input-group" ng-model="subcategoria">
+                                    <div class="input-group-btn">
+                                        <div class="dropdown">
+                                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                Sub-Categoria
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                                <li><a href="#" ng-click="subcategoria='Para Casa'">Para Casa</a></li>
+                                                <li><a href="#"  ng-click="subcategoria='Cozinha'">Cozinha</a></li>
+                                                <li><a href="#"  ng-click="subcategoria='Fitness'">Fitness</a></li>
+                                            </ul>
+                                        </div>  <!-- Button and dropdown menu -->
+                                    </div>
+                                    <input type="text" class="form-control" aria-label="..." readonly="true" value="{{subcategoria}}">
+                                </div>
+
+                            </div>
+                            <div class="col-md-1">
+                                <button ng-click="subcategoria=null" class="btn-primary">X</button>
+                            </div>
+                        </div>
+                    </div>
+
             </div>
         </div>
     </div>

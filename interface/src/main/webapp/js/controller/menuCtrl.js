@@ -12,31 +12,38 @@ app.controller('menuCtrl', function($scope){
     $scope.menus = [
                     {
                      value:true,
-                     name:'HOME'
+                     name:'HOME',
+                     cart:true
                     },
                     {
                      value:false,
-                     name:'PRODUTOS'
+                     name:'PRODUTOS',
+                     cart:true
                     },
                     {
                     value:false,
-                    name:'CARRINHO'
+                    name:'CARRINHO',
+                    cart:true
                     },
                     {
                     value:false,
-                    name:'CADASTRO'
+                    name:'CADASTRO',
+                    cart:true
                     },
                     {
                     value:false,
-                    name:'PRODUTO'
+                    name:'PRODUTO',
+                    cart:true
                     },
                     {
                     value:false,
-                    name:'LOJAS'
+                    name:'LOJAS',
+                    cart:true
                     },
                     {
                     value:false,
-                    name:'EMPREENDER'
+                    name:'EMPREENDER',
+                    cart:false
                     }
                     ]
 
@@ -64,6 +71,7 @@ app.controller('menuCtrl', function($scope){
                             break;
                         case $scope.menus[6].name:
                             enableMenu($scope.menus[6].name);
+                            $scope.hideCart();
                             break;
                         default: enableMenu($scope.menus[0].name);
                     }
@@ -74,10 +82,15 @@ app.controller('menuCtrl', function($scope){
         for(i =0;i<length;i++){
             if($scope.menus[i].name==name){
                 $scope.menus[i].value=true;
+                if($scope.menus[i].cart==true){
+                    showCart();
+                }
             }else{
                 $scope.menus[i].value=false;
             }
         }
+
+
 
     }
 

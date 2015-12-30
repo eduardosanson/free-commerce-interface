@@ -1,0 +1,45 @@
+<form class="form-horizontal">
+    <fieldset>
+
+        <!-- Form Name -->
+        <legend>Aqui as informações são necessárias para identificá-lo</legend>
+
+        <!-- Search input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="cpfOrCnpj"></label>
+            <div class="col-md-5">
+                <input id="cpfOrCnpj" name="cpfOrCnpj" type="search" placeholder="Digite o cpf Ou Cnpj" class="form-control input-md" required="">
+
+            </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="lojaName"></label>
+            <div class="col-md-5">
+                <input id="lojaName" name="lojaName" type="text" placeholder="Nome do Empreendimento" class="form-control input-md" required="">
+
+            </div>
+        </div>
+
+        <!-- Select Basic -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="selectCategorie"></label>
+            <div class="col-md-5">
+                <select id="selectCategorie" name="selectCategorie" class="form-control">
+                    <option value="1">Categoria</option>
+                    <option value="2">Option one</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Button -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="next"></label>
+            <div class="col-md-4">
+                <button class="btn btn-primary" ng-click="activateStep(3)">Próximo -&gt;</button>
+            </div>
+        </div>
+
+    </fieldset>
+</form>

@@ -31,14 +31,18 @@
                     </button>
                 </div>
                 <div class="collapse navbar-collapse navbar-menubuilder">
-                    <ul class="nav navbar-nav navbar-left">
-                        <li ng-class="menus[0].value==true?'active':''"><a href="#" ng-click="activateMenu(menus[0].name)">Home</a></li>
+                    <ul class="nav navbar-nav navbar-left" ng-controller="storeSignUpCtrl">
+                        <li ng-class="menus[0].value==true?'active':''"><a href="#" ng-click="activateMenu(menus[0].name)">Inicio</a></li>
                         <li ng-show="menus[1].value" ng-class="menus[1].value==true?'active':''"><a href="#" ng-click="activateMenu(menus[1].name)">Produtos</a></li>
                         <li ng-class="menus[2].value==true?'active':''"><a href="#" ng-click="activateMenu(menus[2].name)">Carrinho</a></li>
                         <li ng-class="menus[3].value==true?'active':''"><a href="#" ng-click="activateMenu(menus[3].name)">Endereço de Entrega</a></li>
                         <li ng-class="menus[4].value==true?'active':''"><a href="#" ng-click="activateMenu(menus[4].name)">Descrição do Produto</a></li>
                         <li ng-class="menus[5].value==true?'active':''"><a href="#" ng-click="activateMenu(menus[5].name)">Lojas</a></li>
-                        <li ng-class="menus[6].value==true?'active':''"><a href="#" ng-click="activateMenu(menus[6].name)">Empreender</a></li>
+                        <li ng-class="menus[6].value==true?'active':''"><a href="#" ng-click="activateMenu(menus[6].name)">Minha página (cliente)</a></li>
+                        <li ng-class="menus[7].value==true?'active':''"><a href="#" ng-click="activateMenu(menus[7].name)">Minha página (loja)</a></li>
+                        <li ng-click="hideCart()"> <a href="#formStore"  data-toggle="modal">Empreender</a></li>
+                        <li ng-click="showCart()"> <a href="#formClient"  data-toggle="modal">Cadastrar</a></li>
+                        <li > <a href="#formLogin"  data-toggle="modal">Login</a></li>
                     </ul>
                 </div>
             </div>

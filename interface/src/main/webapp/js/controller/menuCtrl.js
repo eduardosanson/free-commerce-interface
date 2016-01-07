@@ -42,13 +42,42 @@ app.controller('menuCtrl', function($scope){
                     },
                     {
                     value:false,
+                    name:'CLIENTE',
+                    cart:false
+                    },
+                    {
+                    value:false,
                     name:'EMPREENDER',
                     cart:false
                     }
-                    ]
+                    ];
+
+            $scope.popUpMenus = [
+                                {
+                                 show:false,
+                                 name:'CLIENTE',
+                                 cart:false
+                                },
+                                {
+                                 show:false,
+                                 name:'EMPREENDER',
+                                 cart:false
+                                }
+                                ];
+
+
+            $scope.activePopUpMenu = function(popUpMenu){
+                    var length = $scope.popUpMenus.length;
+                    for(i=0;i<length;i++){
+                        if($scope.popUpMenus[i].name==popUpMenu.name){
+                            $scope.popUpMenus[i].show=true;
+                        }else{
+                            $scope.popUpMenus[i].show=false;
+                        }
+                    }
+            }
 
             $scope.activateMenu = function(menu){
-
 
                     switch(menu) {
                         case $scope.menus[0].name:
@@ -71,11 +100,28 @@ app.controller('menuCtrl', function($scope){
                             break;
                         case $scope.menus[6].name:
                             enableMenu($scope.menus[6].name);
+                            $scope.showCart();
+                            break;
+                        case $scope.menus[7].name:
+                            enableMenu($scope.menus[7].name);
                             $scope.hideCart();
                             break;
                         default: enableMenu($scope.menus[0].name);
                     }
             }
+
+    var enablePopUpMenu = function(name){
+        var length = $scope.menus.length;
+        for(i =0;i<length;i++){
+            if($scope.menus[i].name==name){
+                $scope.menus[i].value=true;
+                if($scope.menus[i].cart==true){
+                    $scope.showCart();
+                }
+            }
+            }
+
+    }
 
     var enableMenu = function(name){
         var length = $scope.menus.length;
@@ -83,7 +129,7 @@ app.controller('menuCtrl', function($scope){
             if($scope.menus[i].name==name){
                 $scope.menus[i].value=true;
                 if($scope.menus[i].cart==true){
-                    showCart();
+                    $scope.showCart();
                 }
             }else{
                 $scope.menus[i].value=false;

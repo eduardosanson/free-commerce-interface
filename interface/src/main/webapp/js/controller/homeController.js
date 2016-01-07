@@ -1,20 +1,20 @@
 app.controller('homeController',
     ['$scope','$http','$sce','$controller',function($scope,$http,$sce,$controller){
 
-        $scope.hideCart = function (){
-            $scope.cart.show = false;
+        $scope.hideCart = function(){
+            $scope.cart.show=false;
         }
 
-        $scope.showCart = function (){
-            $scope.cart.show = true;
+        $scope.showCart = function(){
+            $scope.cart.show=true;
         }
 
         $scope.cart ={
                         products:null,
                         length:0,
                         totalPrice:0,
-                        show:true
-
+                        show:true,
+                        cart:true
                 }
 
 

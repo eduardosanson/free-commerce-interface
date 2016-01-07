@@ -29,6 +29,25 @@ app.controller('storeSignUpCtrl',
 
         ]
 
+        $scope.activeDefaultSteps = function(){
+            var length = $scope.steps.length;
+            for(i=0;i<length;i++){
+                if($scope.steps[i].step==2||$scope.steps[i].step==3){
+                    $scope.steps[i].show=false;
+                    $scope.steps[i].active=false;
+                    $scope.steps[i].dataToggle='';
+                    $scope.steps[i].classe='disabled';
+                    $scope.steps[i].id='tab2';
+                }else{
+                    $scope.steps[i].id='tab1';
+                    $scope.steps[i].classe='active';
+                    $scope.steps[i].dataToggle='tab';
+                    $scope.steps[i].show=true;
+                    $scope.steps[i].active=true;
+                }
+            }
+        }
+
         $scope.activateStepByTab = function(step){
             var length = $scope.steps.length;
             for(i=1;i<length;i++){

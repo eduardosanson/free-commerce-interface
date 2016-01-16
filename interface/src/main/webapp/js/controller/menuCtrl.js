@@ -7,7 +7,9 @@
  *
  * @requires $scope
  * */
-app.controller('menuCtrl', function($scope){
+app.controller('menuCtrl',['$scope','$controller', function($scope,$controller){
+
+
 
     $scope.menus = [
                     {
@@ -101,6 +103,8 @@ app.controller('menuCtrl', function($scope){
                         case $scope.menus[6].name:
                             enableMenu($scope.menus[6].name);
                             $scope.showCart();
+                            $scope.getMyShopping();
+                            console.log($scope.MyShoppingObj)
                             break;
                         case $scope.menus[7].name:
                             enableMenu($scope.menus[7].name);
@@ -163,4 +167,4 @@ app.controller('menuCtrl', function($scope){
     }
 
 
-});
+}]);

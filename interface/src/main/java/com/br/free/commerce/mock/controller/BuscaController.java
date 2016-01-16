@@ -1,5 +1,6 @@
 package com.br.free.commerce.mock.controller;
 
+import com.br.free.commerce.mock.entity.Pedido;
 import com.br.free.commerce.mock.entity.Produto;
 import com.br.free.commerce.mock.util.ProdutosUtil;
 import org.springframework.web.bind.annotation.*;
@@ -32,5 +33,8 @@ public class BuscaController {
 
     @RequestMapping(path = "/buscarProdutos/PorNome")
     public List<Produto> buscarProdutoPorNome(@RequestParam String productName){return ProdutosUtil.criarListaDeBusca();}
+
+    @RequestMapping(path = "pedidosPorUsuario")
+    public List<Pedido> buscarPedidoPorUsuario(){return ProdutosUtil.criarListaDePedidos();}
 
 }

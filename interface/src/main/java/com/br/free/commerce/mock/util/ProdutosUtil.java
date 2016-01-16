@@ -1,6 +1,9 @@
 package com.br.free.commerce.mock.util;
 
+import com.br.free.commerce.mock.entity.ItemPedido;
+import com.br.free.commerce.mock.entity.Pedido;
 import com.br.free.commerce.mock.entity.Produto;
+import com.br.free.commerce.mock.enums.ITEM_PEDIDO_STATUS;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -253,6 +256,56 @@ public class ProdutosUtil {
         }
 
         return produtos;
+    }
+
+    public static List<Pedido> criarListaDePedidos(){
+        Produto produto = new Produto();
+        Produto produto2 = new Produto();
+        Pedido pedido1 = new Pedido();
+        Pedido pedido2 = new Pedido();
+        ItemPedido itemPedido = new ItemPedido();
+        ItemPedido itemPedido2 = new ItemPedido();
+        pedido1.setId(31312312L);
+        pedido2.setId(312312312L);
+        List<ItemPedido> itensPedidos = new ArrayList<>();
+        List<ItemPedido> itensPedidos2 = new ArrayList<>();
+
+        List<Pedido> pedidos = new ArrayList<>();
+
+
+        produto.setName("Apple new mac book 2015 March :P");
+        produto.setLastPrice(999.0);
+        produto.setImage("img/product-4.jpg");
+        produto.setPrice(899.0);
+        produto.setRating(3);
+
+        itemPedido.setProduto(produto);
+        itemPedido.setQuantidade(2);
+        itemPedido.setStatus(ITEM_PEDIDO_STATUS.ENTREGUE);
+
+        itensPedidos.add(itemPedido);
+
+        pedido1.setItem(itensPedidos);
+        pedidos.add(pedido1);
+
+
+        produto2.setName("Sony Smart TV - 2015");
+        produto2.setLastPrice(425.0);
+        produto2.setImage("img/product-thumb-4.jpg");
+        produto2.setPrice(400.0);
+        produto2.setRating(4);
+
+        itemPedido2.setProduto(produto2);
+        itemPedido2.setQuantidade(1);
+        itemPedido2.setStatus(ITEM_PEDIDO_STATUS.EXTRAVIADO);
+
+        itensPedidos2.add(itemPedido2);
+        pedido2.setItem(itensPedidos2);
+
+        pedidos.add(pedido2);
+
+        return pedidos;
+
     }
 
 }
